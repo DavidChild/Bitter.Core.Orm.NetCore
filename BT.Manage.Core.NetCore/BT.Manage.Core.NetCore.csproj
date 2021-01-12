@@ -42,17 +42,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BT.Manage.Frame.Base.NetCore" Version="3.7.1.10" />
     <PackageReference Include="MySql.Data" Version="8.0.12" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.70" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
     <PackageReference Include="System.Data.Odbc" Version="4.5.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BT.Manage.Frame.Base.NetCore\BT.Manage.Frame.Base.NetCore.csproj" />
-    <ProjectReference Include="..\BT.Manage.Tools.NetCore\BT.Manage.Tools.NetCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

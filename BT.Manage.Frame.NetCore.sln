@@ -7,9 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BT.Manage.CoreRecource", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT.Manage.Core.NetCore", "BT.Manage.Core.NetCore\BT.Manage.Core.NetCore.csproj", "{D152C348-04F3-4A8B-B7E7-B99BEB08BE24}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT.Manage.Tools.NetCore", "BT.Manage.Tools.NetCore\BT.Manage.Tools.NetCore.csproj", "{53B348BD-2F7F-4AC8-8760-0D2F622427F9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT.Manage.Frame.Base.NetCore", "BT.Manage.Frame.Base.NetCore\BT.Manage.Frame.Base.NetCore.csproj", "{B02DA762-9596-41EF-AA11-C581B0B89E38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BT.Manage.DataAccess.NetCore", "BT.Manage.DataAccess.NetCore\BT.Manage.DataAccess.NetCore.csproj", "{57BAB006-4401-484F-8252-748BE7E39EC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,21 +19,17 @@ Global
 		{D152C348-04F3-4A8B-B7E7-B99BEB08BE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D152C348-04F3-4A8B-B7E7-B99BEB08BE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D152C348-04F3-4A8B-B7E7-B99BEB08BE24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53B348BD-2F7F-4AC8-8760-0D2F622427F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53B348BD-2F7F-4AC8-8760-0D2F622427F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53B348BD-2F7F-4AC8-8760-0D2F622427F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53B348BD-2F7F-4AC8-8760-0D2F622427F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B02DA762-9596-41EF-AA11-C581B0B89E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B02DA762-9596-41EF-AA11-C581B0B89E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B02DA762-9596-41EF-AA11-C581B0B89E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B02DA762-9596-41EF-AA11-C581B0B89E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BAB006-4401-484F-8252-748BE7E39EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BAB006-4401-484F-8252-748BE7E39EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BAB006-4401-484F-8252-748BE7E39EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BAB006-4401-484F-8252-748BE7E39EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D152C348-04F3-4A8B-B7E7-B99BEB08BE24} = {E2792882-D4CF-456D-980E-531D9C04904F}
-		{B02DA762-9596-41EF-AA11-C581B0B89E38} = {E2792882-D4CF-456D-980E-531D9C04904F}
+		{57BAB006-4401-484F-8252-748BE7E39EC1} = {E2792882-D4CF-456D-980E-531D9C04904F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E2FC36F-A815-4632-8EBB-94F24F5C50B1}

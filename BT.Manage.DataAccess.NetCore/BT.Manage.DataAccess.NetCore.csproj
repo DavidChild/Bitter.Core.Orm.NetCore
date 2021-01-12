@@ -14,8 +14,4 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BT.Manage.Tools.NetCore\BT.Manage.Tools.NetCore.csproj" />
-  </ItemGroup>
-
 </Project>
