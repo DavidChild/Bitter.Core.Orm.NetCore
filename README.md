@@ -1,4 +1,4 @@
-# BTORM
+# BTORM - A Simple object mapper for NetCore
 
 # NUGET
 https://www.nuget.org/packages/BT.Manage.Core.NetCore/
