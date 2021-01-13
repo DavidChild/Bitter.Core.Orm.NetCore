@@ -1,7 +1,6 @@
-# BTORM - A Simple object mapper for NetCore
-
+# BTORM - 一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
 # NUGET
-https://www.nuget.org/packages/BT.Manage.Core.NetCore/
+NETCORE: https://www.nuget.org/packages/BT.Manage.Core.NetCore/
 
 To install BT.Manage.Core.NetCore, run the following command in the Package Manager Console
 ```
