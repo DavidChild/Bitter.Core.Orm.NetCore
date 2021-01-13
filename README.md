@@ -1,4 +1,4 @@
-# BTORM --全网最新开源高性能易用的 NETCORE ORM MAPPING 框架。
+# BTORM -- NETCORE ORM MAPPING 框架。
 
     一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
     
