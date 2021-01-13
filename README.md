@@ -36,4 +36,12 @@ To install BT.Manage.Core.NetCore, run the following command in the Package Mana
 PM> Install-Package BT.Manage.Core.NetCore
 ```
 
-# SUPORT
+# 博客园
+
+Cnblog: https://www.cnblogs.com/DavidChild/category/1915617.html
+
+
+# 示例Demo 
+
+Github:
+
