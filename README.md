@@ -99,3 +99,41 @@ public class TStudentScoreInfo : BaseModel
 }
 ```
 更多数据库连接配置： https://www.cnblogs.com/davidchildblog/articles/14276611.html
+
+
+## SEARCH DEMO 
+```C#
+#region 根据条件全量查询  学生姓名为 HJB 的同学
+BList<TStudentInfo> students = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find();
+
+// 根据条件批量查询  学生姓名为 HJB 的同学
+TStudentInfo student_1 = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find().FirstOrDefault(); //此FirstOrDefault 重构过,为安全模式,数据库如果查不到数据，返回为空对象,避免返回 NULL.
+if (student_1.FID > 0) //说明查询到数据
+{
+
+}
+#endregion
+
+```
+
+```C#
+#region 高级查询直接SQL语句查询（非分页）
+//查出分数>=90分的学生姓名以及具体学分
+
+DataTable dt=  db.FindQuery(
+                   @"SELECT score.FScore,student.FName as studentNameFROM  t_StudentScore score
+                    LEFT JOIN t_student student  ON score.FStudentId = student.FID
+                    WHERE score.FScore>=@score
+                  ", new { score = 90 }).Find();
+#endregion
+```
+
+```C#
+#region  单表模型驱动查询--只查询符合条件的前 N 条数据，并且只返回具体的列（FAage,FName）：
+
+students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c=>new object[] { c.FAage,c.FName}).Find(); //后面的 Select(columns)  方法指定了需要查询的列
+students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c => new List<object>{ c.FAage, c.FName }).Find(); //后面的 Select(columns)   方法指定了需要查询的列
+
+#endregion
+```
+更多查询DEMO示例： https://www.cnblogs.com/davidchildblog/articles/14276729.html
