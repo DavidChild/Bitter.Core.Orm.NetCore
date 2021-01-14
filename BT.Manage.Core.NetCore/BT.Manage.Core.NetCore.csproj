@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyVersion>2.2.8.1</AssemblyVersion>
     <FileVersion>2.2.8.1</FileVersion>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>2.2.8.1</Version>
     <Description />
   </PropertyGroup>
@@ -54,9 +54,5 @@
   <ItemGroup>
     <Folder Include="BaseExtend\" />
   </ItemGroup>
-
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="del &quot;$(ProjectDir)bin\Debug\*.nupkg&quot;&#xD;&#xA;if not exist &quot;$(ProjectDir)\bin\Debug\NuGet.exe&quot; copy &quot;$(SolutionDir)NuGet.exe&quot; &quot;$(ProjectDir)\bin\Debug&quot;" />
-  </Target>
 
 </Project>
