@@ -75,3 +75,27 @@ public class TStudentScoreInfo : BaseModel
 }
 
 ```
+数据库模型创建说明请看博文： https://www.cnblogs.com/davidchildblog/articles/14276886.html
+
+## Databases Connection Config Setting
+```C#
+{
+
+  "connectionString":[
+    {
+    
+     "dbType": "System.Data.SqlClient",
+      "name": "MainData.Reader", 
+      "value": "Min Pool Size=10;Max Pool Size=500;Connection Timeout=50;Data Source=192.168.99.66,12033;Initial Catalog=readdbname;Persist Security Info=True;User ID=username;Password=pwd; pooling=false"
+    },
+    {
+
+      "dbType": "System.Data.SqlClient",
+      "name": "MainData.Writer",
+      "value": "Min Pool Size=10;Max Pool Size=500;Connection Timeout=50;Data Source=192.168.99.66,12033;Initial Catalog=writedbname;Persist Security Info=True;User ID=test;Password=pwd; pooling=false"
+    }
+   
+   ] 
+}
+```
+更多数据库连接配置： https://www.cnblogs.com/davidchildblog/articles/14276611.html
