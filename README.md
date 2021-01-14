@@ -44,3 +44,34 @@ Cnblog: https://www.cnblogs.com/davidchildblog/category/1916179.html
 
 Github:https://github.com/DavidChild/BTORMSample.git
 
+## Database entities and Attributes 
+```C#
+[TableName("t_StudentScore")]
+public class TStudentScoreInfo : BaseModel
+{
+   /// <summary>
+   /// 主键
+   /// </summary>
+   [Key] //指定主键
+   [Identity] //指定自增长
+   public virtual Int32 FID { get; set; }
+
+   /// <summary>
+   /// 学生Id
+   /// </summary>
+   [Display(Name = @"学生Id")]
+   public virtual Int32? FStudentId { get; set; }
+
+   /// <summary>
+   /// 学分
+   /// </summary>
+   public virtual Int32? FScore { get; set; }
+
+   /// <summary>
+   /// 插入时间
+   /// </summary>
+   public virtual DateTime? FAddTime { get; set; }
+
+}
+
+```
