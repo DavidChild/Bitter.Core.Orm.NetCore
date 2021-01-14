@@ -38,8 +38,7 @@ PM> Install-Package BT.Manage.Core.NetCore
 
 # 博客园
 
-Cnblog: https://www.cnblogs.com/DavidChild/category/1915617.html
-
+Cnblog: https://www.cnblogs.com/davidchildblog/category/1916179.html
 
 # 示例Demo 
 
