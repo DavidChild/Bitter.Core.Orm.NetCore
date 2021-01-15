@@ -42,7 +42,7 @@ Cnblog: https://www.cnblogs.com/davidchildblog/category/1916179.html
 
 # 示例Demo 
 
-Github:https://github.com/DavidChild/BitterORMSample.git
+Github:https://github.com/DavidChild/BitterOrmSample
 
 ## Database entities and Attributes 
 ```C#
