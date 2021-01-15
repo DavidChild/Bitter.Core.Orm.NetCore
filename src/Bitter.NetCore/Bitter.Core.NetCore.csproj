@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyVersion>2.2.8.1</AssemblyVersion>
+    <FileVersion>2.2.8.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.2.8.1</Version>
+    <Description />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BtLinq\**" />
+    <Compile Remove="EntityMap\**" />
+    <EmbeddedResource Remove="BtLinq\**" />
+    <EmbeddedResource Remove="EntityMap\**" />
+    <None Remove="BtLinq\**" />
+    <None Remove="EntityMap\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BaseExtend\BtSqlQueryExtend.cs" />
+    <Compile Remove="BaseExtend\CreateDeepClone.cs" />
+    <Compile Remove="BaseExtend\DynamicExtend.cs" />
+    <Compile Remove="BaseModelExtension.cs" />
+    <Compile Remove="Base\BtLinqToSqlExtensions.cs" />
+    <Compile Remove="Base\BtSql.cs" />
+    <Compile Remove="Base\BtSqlProvidercs.cs" />
+    <Compile Remove="Base\BtSqlQuery.cs" />
+    <Compile Remove="Base\IModelOperation.cs" />
+    <Compile Remove="ChangeProxy\ChangedProxy.cs" />
+    <Compile Remove="DataAccess\SqlClient\BaseQueryExtend.cs" />
+    <Compile Remove="dbset.cs" />
+    <Compile Remove="DbTransactionAccess.cs" />
+    <Compile Remove="dbTranScope.cs" />
+    <Compile Remove="IDataBaseProperty.cs" />
+    <Compile Remove="IModelOprator.cs" />
+    <Compile Remove="ObjectCacheLocked.cs" />
+    <Compile Remove="Op\ModelOpretion.cs" />
+    <Compile Remove="ProviderFactory.cs" />
+    <Compile Remove="VdbBulkCopy\VdbProvider.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.12" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.70" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Data.Odbc" Version="4.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BaseExtend\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bitter.DataAccess.NetCore\Bitter.DataAccess.NetCore.csproj" />
+    <ProjectReference Include="..\Bitter.Frame.Base.NetCore\Bitter.Base.NetCore.csproj" />
+    <ProjectReference Include="..\Bitter.Tools.NetCore\Bitter.Tools.NetCore.csproj" />
+  </ItemGroup>
+
+</Project>

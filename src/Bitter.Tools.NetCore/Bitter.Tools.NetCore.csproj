@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.2.5.8</Version>
+    <AssemblyVersion>2.2.5.8</AssemblyVersion>
+    <FileVersion>2.2.5.8</FileVersion>
+    <Description>支持linux日志输出</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Filter\BTTraceChianFilter.cs" />
+    <Compile Remove="Helper\RequestHelper.cs" />
+    <Compile Remove="NLog\BTCallContext.cs" />
+    <Compile Remove="NLog\ThreadSlot.cs" />
+    <Compile Remove="NLog\TraceParamLayout.cs" />
+    <Compile Remove="Utils\ApiUtil.cs" />
+    <Compile Remove="Utils\LinqUtil.cs" />
+    <Compile Remove="Utils\SessionHelper.cs" />
+    <Compile Remove="Utils\ToWord.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.3.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0" />
+    <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Filter\" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="del &quot;$(ProjectDir)bin\Debug\*.nupkg&quot;&#xD;&#xA;if not exist &quot;$(ProjectDir)\bin\Debug\NuGet.exe&quot; copy &quot;$(SolutionDir)NuGet.exe&quot; &quot;$(ProjectDir)\bin\Debug&quot;" />
+  </Target>
+
+</Project>
