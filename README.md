@@ -1,4 +1,4 @@
-# BitterCore  -- NETCORE ORM MAPPING 框架。
+# Bitter.Core  -- NETCORE ORM MAPPING 框架。
 
     一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
     
@@ -26,7 +26,7 @@
     
     12: 支持字段变更收集
   
- BitterCore  使得程序员变的更懒成为一件美丽的事！
+ Bitter.Core  使得程序员变的更懒成为一件美丽的事！
    
 # NUGET
 NETCORE: https://www.nuget.org/packages/Bitter.Core.NetCore/
