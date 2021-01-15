@@ -29,7 +29,7 @@
  BitterCore  使得程序员变的更懒成为一件美丽的事！
    
 # NUGET
-NETCORE: https://www.nuget.org/packages/BT.Manage.Core.NetCore/
+NETCORE: https://www.nuget.org/packages/Bitter.Core.NetCore/
 
 To install Bitter.Core.NetCore , run the following command in the Package Manager Console
 ```
@@ -42,7 +42,7 @@ Cnblog: https://www.cnblogs.com/davidchildblog/category/1916179.html
 
 # 示例Demo 
 
-Github:https://github.com/DavidChild/BTORMSample.git
+Github:https://github.com/DavidChild/BitterORMSample.git
 
 ## Database entities and Attributes 
 ```C#
