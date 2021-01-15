@@ -38,7 +38,7 @@ PM> Install-Package Bitter.Core.NetCore
 
 # 博客园
 
-Cnblog: https://www.cnblogs.com/davidchildblog/category/1916179.html
+Cnblog: https://www.cnblogs.com/davidchildblog/category/1916170.html
 
 # 示例Demo 
 
