@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyVersion>2.2.8.1</AssemblyVersion>
-    <FileVersion>2.2.8.1</FileVersion>
+    <AssemblyVersion>2.2.8.3</AssemblyVersion>
+    <FileVersion>2.2.8.3</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.2.8.1</Version>
+    <Version>2.2.8.3</Version>
     <Description />
   </PropertyGroup>
 

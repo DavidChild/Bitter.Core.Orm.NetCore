@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>3.7.1.10</Version>
+    <Version>3.7.1.11</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>3.7.1.10</AssemblyVersion>
-    <FileVersion>3.7.1.10</FileVersion>
+    <AssemblyVersion>3.7.1.11</AssemblyVersion>
+    <FileVersion>3.7.1.11</FileVersion>
     <Authors>Bitter.Base.NetCore</Authors>
     <PackageReleaseNotes>Soa调试版本
 3.3.0.0后增加开放接口基础类</PackageReleaseNotes>
