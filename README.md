@@ -1,4 +1,4 @@
-# BTORM -- NETCORE ORM MAPPING 框架。
+# BitterCore  -- NETCORE ORM MAPPING 框架。
 
     一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
     
@@ -26,14 +26,14 @@
     
     12: 支持字段变更收集
   
- BTORM 使得程序员变的更懒成为一件美丽的事！
+ BitterCore  使得程序员变的更懒成为一件美丽的事！
    
 # NUGET
 NETCORE: https://www.nuget.org/packages/BT.Manage.Core.NetCore/
 
-To install BT.Manage.Core.NetCore, run the following command in the Package Manager Console
+To install Bitter.Core.NetCore , run the following command in the Package Manager Console
 ```
-PM> Install-Package BT.Manage.Core.NetCore
+PM> Install-Package Bitter.Core.NetCore
 ```
 
 # 博客园
