@@ -55,7 +55,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bitter.DataAccess.NetCore\Bitter.DataAccess.NetCore.csproj" />
     <ProjectReference Include="..\Bitter.Frame.Base.NetCore\Bitter.Base.NetCore.csproj" />
     <ProjectReference Include="..\Bitter.Tools.NetCore\Bitter.Tools.NetCore.csproj" />
   </ItemGroup>
