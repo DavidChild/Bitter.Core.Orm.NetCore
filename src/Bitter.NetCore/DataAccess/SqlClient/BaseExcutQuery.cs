@@ -113,6 +113,23 @@ namespace Bitter.Core
          }
 
 
+        /// <summary>
+        /// 获取查看将要执行的SQL语句
+        /// </summary>
+        /// <returns></returns>
+        public MonitorInfo ToMonitorInfo()
+        {
+
+            Convert(null);
+            MonitorInfo info = new MonitorInfo() {
+
+                CommandSqlText = this.CommandText,
+                Parameters=this.Parameters
+               
+            };
+            return info;
+        }
+
 
         private void ClearParmeters()
         {
