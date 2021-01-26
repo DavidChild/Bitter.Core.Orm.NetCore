@@ -11,7 +11,7 @@ namespace BT.Manage.Core
     ** date： 2017/2/23 10:06:22
     ** desc：
     ** Ver.:  V1.0.0
-    ** Copyright (C) 2016 备胎 版权所有。
+    ** Copyright (C) 2016  DavidChild 版权所有
     *********************************************************************************/
 
     public class DelegateObj

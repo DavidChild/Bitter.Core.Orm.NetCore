@@ -29,5 +29,18 @@
         {
             return true;
         }
+        public static bool IsNull(this string str, string isnulltostr)
+        {
+            return true;
+        }
+        public static bool IsNull(this int intobj, int isnulltoint)
+        {
+            return true;
+        }
+        public static bool IsNull(this int? intobj, int isnulltoint)
+        {
+            return true;
+        }
+     
     }
 }

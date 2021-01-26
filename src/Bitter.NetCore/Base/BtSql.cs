@@ -10,7 +10,7 @@ namespace BT.Manage.Core
     ** date： 2017/1/19 13:29:22
     ** desc：
     ** Ver.:  V1.0.0
-    ** Copyright (C) 2016 备胎 版权所有。
+    ** Copyright (C) 2016 Bitter 版权所有。
     *********************************************************************************/
 
     internal class BtSql : IModelOperation

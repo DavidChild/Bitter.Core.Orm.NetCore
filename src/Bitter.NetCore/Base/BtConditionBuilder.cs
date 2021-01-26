@@ -212,13 +212,13 @@ namespace Bitter.Core
                     left = this.m_conditionParts.Pop();
                     break;
 
-                case "ToSafeString":
+                case "IsNull":
                     format = string.Format("ISNULL({0},'{1}')", ((MemberExpression)m.Arguments[0]).Member.Name, ((ConstantExpression)m.Arguments[1]).Value);
                     break;
 
-                case "ToSafeInt32":
-                    format = string.Format("ISNULL({0},{1})", ((MemberExpression)(((UnaryExpression)m.Arguments[0]).Operand)).Member.Name, ((ConstantExpression)m.Arguments[1]).Value);
-                    break;
+                //case "IsNull":
+                //    format = string.Format("ISNULL({0},{1})", ((MemberExpression)(((UnaryExpression)m.Arguments[0]).Operand)).Member.Name, ((ConstantExpression)m.Arguments[1]).Value);
+                //    break;
 
                 case "In":
                     format = "({0} In(" + ((ConstantExpression)m.Arguments[1]).Value.SQLInString() + "))";
