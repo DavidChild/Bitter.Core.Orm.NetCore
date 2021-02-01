@@ -1,0 +1,18 @@
+﻿{
+
+  "connectionString": [
+    {
+
+      "dbType": "System.Data.SqlLite",
+      "name": "MainData.Reader",
+      "value": " Data Source=mydb.db;Version=3;Pooling=False;Max Pool Size=100;"
+    },
+    {
+
+      "dbType": "System.Data.SqlLite",
+      "name": "MainData.Writer",
+      "value": " Data Source=mydb.db;Version=3;Pooling=False;Max Pool Size=100;"
+    }
+
+  ]
+}

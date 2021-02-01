@@ -11,11 +11,12 @@ namespace Bitter.Core
 {
   internal class DbProvider
     {
-        public const  string MSSQLPROVIDER = "System.Data.SqlClient";
+      
+        public const string MSSQLPROVIDER = "System.Data.SqlClient";
         public const string OLEDBPROVIDER = "System.Data.OleDb";
         public const string MYSQLPROVIDER = "MySql.Data.MySqlClient";
         public const string ORACLEPROVIDER = "System.Data.OracleClient";
-
+        public const string SQLLITE = "System.Data.SqlLite";
         public static DatabaseType GetType(string typeInfo)
         {
             DatabaseType dbtype=DatabaseType.MSSQLServer;
@@ -32,6 +33,9 @@ namespace Bitter.Core
                     break;
                 case DbProvider.ORACLEPROVIDER:
                     dbtype = DatabaseType.Oracle;
+                    break;
+                case DbProvider.SQLLITE:
+                    dbtype = DatabaseType.SqlLite;
                     break;
                 default:
                     dbtype = DatabaseType.MSSQLServer;
@@ -50,14 +54,10 @@ namespace Bitter.Core
             {
                 case DatabaseType.MSSQLServer:
                     return new SqlCommand();
-                   
-                //case DatabaseType.OleDB:
-                //    return new System.Data.   //.OleDbCommand();
-                     
-                //    break;
                 case DatabaseType.MySql:
                     return new MySql.Data.MySqlClient.MySqlCommand();
-                   
+                case DatabaseType.SqlLite:
+                    return new System.Data.SQLite.SQLiteCommand();
                 default:
                     return new SqlCommand();
                     

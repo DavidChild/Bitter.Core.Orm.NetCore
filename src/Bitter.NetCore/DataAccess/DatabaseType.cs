@@ -6,6 +6,7 @@
         Oracle,
         OleDB,
         Odbc,
-        MySql
+        MySql,
+        SqlLite
     }
 }
