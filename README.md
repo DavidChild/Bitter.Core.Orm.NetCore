@@ -26,7 +26,7 @@
     
     12: 支持字段变更收集
   
- Bitter.Core  使得程序员变的更懒成为一件美丽的事！
+  Bitter.Core It's a beautiful thing to make programmers lazier!
    
 # NUGET
 NETCORE: https://www.nuget.org/packages/Bitter.Core.NetCore/
