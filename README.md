@@ -50,25 +50,25 @@ Github:https://github.com/DavidChild/Bitter.Core.Sample.git
 public class TStudentScoreInfo : BaseModel
 {
    /// <summary>
-   /// 主键
+   /// It's a Primary key
    /// </summary>
-   [Key] //指定主键
-   [Identity] //指定自增长
+   [Key] //designate the filed is  Primary key
+   [Identity] //designate the filed is  Identity
    public virtual Int32 FID { get; set; }
 
    /// <summary>
-   /// 学生Id
+   ///  student Id
    /// </summary>
-   [Display(Name = @"学生Id")]
+   [Display(Name = @"student Id")]
    public virtual Int32? FStudentId { get; set; }
 
    /// <summary>
-   /// 学分
+   /// score
    /// </summary>
    public virtual Int32? FScore { get; set; }
 
    /// <summary>
-   /// 插入时间
+   /// add time
    /// </summary>
    public virtual DateTime? FAddTime { get; set; }
 
@@ -103,12 +103,12 @@ db Connection Setting： https://www.cnblogs.com/davidchildblog/articles/1427661
 
 ## SEARCH DEMO 
 ```C#
-#region 根据条件全量查询  学生姓名为 HJB 的同学
+#region According to the conditions of full inquiry students name HJB students
 BList<TStudentInfo> students = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find();
 
-// 根据条件批量查询  学生姓名为 HJB 的同学
-TStudentInfo student_1 = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find().FirstOrDefault(); //此FirstOrDefault 重构过,为安全模式,数据库如果查不到数据，返回为空对象,避免返回 NULL.
-if (student_1.FID > 0) //说明查询到数据
+// Batch query the students whose names are HJB according to the conditions
+TStudentInfo student_1 = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find().FirstOrDefault(); //The FirstOrDefault method  After refactoring, it is in security mode. If the database can't find the data, it will return null object to avoid returning null
+if (student_1.FID > 0) //Description query data
 {
 
 }
@@ -117,8 +117,8 @@ if (student_1.FID > 0) //说明查询到数据
 ```
 
 ```C#
-#region 高级查询直接SQL语句查询（非分页）
-//查出分数>=90分的学生姓名以及具体学分
+#region Advanced query direct SQL statement query (non pagination)
+//Find out the name of the student whose score is > = 90 and the specific credit
 
 DataTable dt=  db.FindQuery(
                    @"SELECT score.FScore,student.FName as studentNameFROM  t_StudentScore score
@@ -129,10 +129,10 @@ DataTable dt=  db.FindQuery(
 ```
 
 ```C#
-#region  单表模型驱动查询--只查询符合条件的前 N 条数据，并且只返回具体的列（FAage,FName）：
+#region  Single table model driven query only queries the first n qualified data, and only returns specific columns (faage, fname)
 
-students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c=>new object[] { c.FAage,c.FName}).Find(); //后面的 Select(columns)  方法指定了需要查询的列
-students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c => new List<object>{ c.FAage, c.FName }).Find(); //后面的 Select(columns)   方法指定了需要查询的列
+students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c=>new object[] { c.FAage,c.FName}).Find(); //The later select (columns) method specifies the columns to query
+students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c => new List<object>{ c.FAage, c.FName }).Find(); //The later select (columns) method specifies the columns to query
 
 #endregion
 ```
