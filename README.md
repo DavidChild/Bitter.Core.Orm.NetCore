@@ -1,32 +1,32 @@
 # Bitter.Core  -- NETCORE ORM MAPPING Framework。
 
-    一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
-    
-    1： 支持 MSSQL,MYSQL
-    
-    2: 支持模型查询，以及 SQL 查询
-    
-    3：支持事务一次性提交
-    
-    4：支持BuldCopy 批量事务提交
-    
-    5：支持查询数据模型转换
-    
-    6：支持异常抛出，事务中断
-    
-    7：支持跨库事务提交（多次事务）
-    
-    8：支持SQL WITH优化
-    
-    9：支持 CONTOVER,SELECT ROW 模式的分页查询模式
-    
-    10: 支持多库
-    
-    11：支持读写分离
-    
-    12: 支持字段变更收集
+   A simple and easy to use high performance NETCORE / netframework database persistence framework (ORM)
+
+1: Support MSSQL, MySQL
+
+2: Support model query and SQL query
+
+3: One time transaction commit is supported
+
+4: Support bulk transaction commit of buldcopy
+
+5: Support query data model transformation
+
+6: Support exception throwing and transaction interruption
+
+7: Support cross database transaction commit (multiple transactions)
+
+8: Support SQL with optimization
+
+9: Pagination query mode supporting convert, select row mode
+
+10: Support multiple databases
+
+11: Read write separation is supported
+
+12: Support field change collection
   
-  Bitter.Core It's a beautiful thing to make programmers lazier!
+Bitter.Core It's a beautiful thing to make programmers lazier!
    
 # NUGET
 NETCORE: https://www.nuget.org/packages/Bitter.Core.NetCore/
