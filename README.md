@@ -1,4 +1,4 @@
-# Bitter.Core  -- NETCORE ORM MAPPING 框架。
+# Bitter.Core  -- NETCORE ORM MAPPING Framework。
 
     一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
     
@@ -36,11 +36,11 @@ To install Bitter.Core.NetCore , run the following command in the Package Manage
 PM> Install-Package Bitter.Core.NetCore
 ```
 
-# 博客园
+# Blog
 
 Cnblog: https://www.cnblogs.com/davidchildblog/category/1916170.html
 
-# 示例Demo 
+# Simple-Demo 
 
 Github:https://github.com/DavidChild/Bitter.Core.Sample.git
 
@@ -75,7 +75,7 @@ public class TStudentScoreInfo : BaseModel
 }
 
 ```
-数据库模型创建说明请看博文： https://www.cnblogs.com/davidchildblog/articles/14276886.html
+refer to the blog for the description of database model creation： https://www.cnblogs.com/davidchildblog/articles/14276886.html
 
 ## Databases Connection Config Setting
 ```C#
@@ -98,7 +98,7 @@ public class TStudentScoreInfo : BaseModel
    ] 
 }
 ```
-更多数据库连接配置： https://www.cnblogs.com/davidchildblog/articles/14276611.html
+db Connection Setting： https://www.cnblogs.com/davidchildblog/articles/14276611.html
 
 
 ## SEARCH DEMO 
@@ -136,4 +136,4 @@ students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.
 
 #endregion
 ```
-更多查询DEMO示例： https://www.cnblogs.com/davidchildblog/articles/14276729.html
+more demo simple： https://www.cnblogs.com/davidchildblog/articles/14276729.html
