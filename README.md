@@ -1,32 +1,32 @@
-# Bitter.Core  -- NETCORE ORM MAPPING 框架。
+# Bitter.Core  -- NETCORE ORM MAPPING Framework。
 
-    一个全网最简单易用的高性能NETCORE/NETFRAMEWORK 数据库持久化框架（ORM）
-    
-    1： 支持 MSSQL,MYSQL
-    
-    2: 支持模型查询，以及 SQL 查询
-    
-    3：支持事务一次性提交
-    
-    4：支持BuldCopy 批量事务提交
-    
-    5：支持查询数据模型转换
-    
-    6：支持异常抛出，事务中断
-    
-    7：支持跨库事务提交（多次事务）
-    
-    8：支持SQL WITH优化
-    
-    9：支持 CONTOVER,SELECT ROW 模式的分页查询模式
-    
-    10: 支持多库
-    
-    11：支持读写分离
-    
-    12: 支持字段变更收集
+   A simple and easy to use high performance NETCORE / netframework database persistence framework (ORM)
+
+1: Support MSSQL, MySQL
+
+2: Support model query and SQL query
+
+3: One time transaction commit is supported
+
+4: Support bulk transaction commit of buldcopy
+
+5: Support query data model transformation
+
+6: Support exception throwing and transaction interruption
+
+7: Support cross database transaction commit (multiple transactions)
+
+8: Support SQL with optimization
+
+9: Pagination query mode supporting convert, select row mode
+
+10: Support multiple databases
+
+11: Read write separation is supported
+
+12: Support field change collection
   
- Bitter.Core  使得程序员变的更懒成为一件美丽的事！
+Bitter.Core It's a beautiful thing to make programmers lazier!
    
 # NUGET
 NETCORE: https://www.nuget.org/packages/Bitter.Core.NetCore/
@@ -36,11 +36,11 @@ To install Bitter.Core.NetCore , run the following command in the Package Manage
 PM> Install-Package Bitter.Core.NetCore
 ```
 
-# 博客园
+# Blog
 
-Cnblog: https://www.cnblogs.com/davidchildblog/category/1916170.html
+Cnblogs: https://www.cnblogs.com/davidchildblog/category/1916170.html
 
-# 示例Demo 
+# Simple-Demo 
 
 Github:https://github.com/DavidChild/Bitter.Core.Sample.git
 
@@ -50,32 +50,32 @@ Github:https://github.com/DavidChild/Bitter.Core.Sample.git
 public class TStudentScoreInfo : BaseModel
 {
    /// <summary>
-   /// 主键
+   /// It's a Primary key
    /// </summary>
-   [Key] //指定主键
-   [Identity] //指定自增长
+   [Key] //designate the filed is  Primary key
+   [Identity] //designate the filed is  Identity
    public virtual Int32 FID { get; set; }
 
    /// <summary>
-   /// 学生Id
+   ///  student Id
    /// </summary>
-   [Display(Name = @"学生Id")]
+   [Display(Name = @"student Id")]
    public virtual Int32? FStudentId { get; set; }
 
    /// <summary>
-   /// 学分
+   /// score
    /// </summary>
    public virtual Int32? FScore { get; set; }
 
    /// <summary>
-   /// 插入时间
+   /// add time
    /// </summary>
    public virtual DateTime? FAddTime { get; set; }
 
 }
 
 ```
-数据库模型创建说明请看博文： https://www.cnblogs.com/davidchildblog/articles/14276886.html
+refer to the blog for the description of database model creation： https://www.cnblogs.com/davidchildblog/articles/14276886.html
 
 ## Databases Connection Config Setting
 ```C#
@@ -98,17 +98,17 @@ public class TStudentScoreInfo : BaseModel
    ] 
 }
 ```
-更多数据库连接配置： https://www.cnblogs.com/davidchildblog/articles/14276611.html
+db Connection Setting： https://www.cnblogs.com/davidchildblog/articles/14276611.html
 
 
 ## SEARCH DEMO 
 ```C#
-#region 根据条件全量查询  学生姓名为 HJB 的同学
+#region According to the conditions of full inquiry students name HJB students
 BList<TStudentInfo> students = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find();
 
-// 根据条件批量查询  学生姓名为 HJB 的同学
-TStudentInfo student_1 = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find().FirstOrDefault(); //此FirstOrDefault 重构过,为安全模式,数据库如果查不到数据，返回为空对象,避免返回 NULL.
-if (student_1.FID > 0) //说明查询到数据
+// Batch query the students whose names are HJB according to the conditions
+TStudentInfo student_1 = db.FindQuery<TStudentInfo>().Where(p => p.FName == "HJB").Find().FirstOrDefault(); //The FirstOrDefault method  After refactoring, it is in security mode. If the database can't find the data, it will return null object to avoid returning null
+if (student_1.FID > 0) //Description query data
 {
 
 }
@@ -117,8 +117,8 @@ if (student_1.FID > 0) //说明查询到数据
 ```
 
 ```C#
-#region 高级查询直接SQL语句查询（非分页）
-//查出分数>=90分的学生姓名以及具体学分
+#region Advanced query direct SQL statement query (non pagination)
+//Find out the name of the student whose score is > = 90 and the specific credit
 
 DataTable dt=  db.FindQuery(
                    @"SELECT score.FScore,student.FName as studentNameFROM  t_StudentScore score
@@ -129,11 +129,11 @@ DataTable dt=  db.FindQuery(
 ```
 
 ```C#
-#region  单表模型驱动查询--只查询符合条件的前 N 条数据，并且只返回具体的列（FAage,FName）：
+#region  Single table model driven query only queries the first n qualified data, and only returns specific columns (faage, fname)
 
-students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c=>new object[] { c.FAage,c.FName}).Find(); //后面的 Select(columns)  方法指定了需要查询的列
-students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c => new List<object>{ c.FAage, c.FName }).Find(); //后面的 Select(columns)   方法指定了需要查询的列
+students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c=>new object[] { c.FAage,c.FName}).Find(); //The later select (columns) method specifies the columns to query
+students = db.FindQuery<TStudentInfo>().Where(p => p.FAage > 15).ThenAsc(p => p.FAage).ThenDesc(p => p.FAddTime).SetSize(10).Select(c => new List<object>{ c.FAage, c.FName }).Find(); //The later select (columns) method specifies the columns to query
 
 #endregion
 ```
-更多查询DEMO示例： https://www.cnblogs.com/davidchildblog/articles/14276729.html
+More Demo Simple： https://www.cnblogs.com/davidchildblog/articles/14276729.html
