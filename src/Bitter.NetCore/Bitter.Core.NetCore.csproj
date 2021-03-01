@@ -19,9 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="BaseExtend\BtSqlQueryExtend.cs" />
-    <Compile Remove="BaseExtend\CreateDeepClone.cs" />
-    <Compile Remove="BaseExtend\DynamicExtend.cs" />
     <Compile Remove="BaseModelExtension.cs" />
     <Compile Remove="Base\BtLinqToSqlExtensions.cs" />
     <Compile Remove="Base\BtSql.cs" />
@@ -49,10 +46,6 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.113.7" />
     <PackageReference Include="System.Linq" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="BaseExtend\" />
   </ItemGroup>
 
   <ItemGroup>
